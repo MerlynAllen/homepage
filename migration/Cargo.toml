@@ -1,0 +1,22 @@
+[package]
+name = "migration"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+description = "Database migration tool for homepage project"
+
+[lib]
+name = "migration"
+path = "src/lib.rs"
+
+[[bin]]
+name = "migrate"
+path = "src/main.rs"
+
+[dependencies]
+sea-orm-migration = "1.1.13"
+sea-orm.workspace = true
+tokio.workspace = true
+clap.workspace = true
+async-trait.workspace = true
+chrono.workspace = true
